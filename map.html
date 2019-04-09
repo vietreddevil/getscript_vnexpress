@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="" name="">
+	<button onclick="check();">check</button>
+	<script type="text/javascript">
+		function check() {
+			https://maps.googleapis.com/maps/api/directions/json?origin=21.0214657,105.8074862&destination=20.9326708,105.6424498&avoid=highways&mode=walking&key=AIzaSyD3EiKbtf8SO7sQjTwMWFn53gH1eJaW5vM
+		}
+	</script>
+</body>
+require "simple_html_dom.php";
+
+  $slat=$_POST['slat'];
+  $slon=$_POST['slon'];
+  $elat=$_POST['elat'];
+  $elon=$_POST['elon'];
+
+  $link = "https://maps.googleapis.com/maps/api/directions/json?origin=".$slat.",".$slon."&destination=".$elat.",".$elon."&avoid=highways&mode=walking&key=AIzaSyD3EiKbtf8SO7sQjTwMWFn53gH1eJaW5vM";
+  $html = file_get_html($link);
+  $html = (string) $html;
+  session_start(); // must be called before data is sent
+
+  $_SESSION['content'] = $html;
+  header('location:success.php');
+</html>
