@@ -2,7 +2,7 @@ var fs = require("fs");
 var readline = require('readline');
 
 var dirname = 'F:/a_data/';
-var des_dirname = 'F:/new_data/';
+var des_dirname = 'F:/khoaluan/data1/';
 async function asyncForEach(array, callback) {
   for (let index = 0; index < array.length; index++) {
     await callback(array[index], index, array);

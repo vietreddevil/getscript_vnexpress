@@ -1,7 +1,7 @@
 <?php
 require "simple_html_dom.php";
 $directory = 'data/';
-$des = 'F:/aa_data/';
+$des = 'F:/rough_data/';
 $scanned_directory = array_diff(scandir($directory), array('..', '.'));
 $arrayName = array("thoi-su",
   "the-gioi",
